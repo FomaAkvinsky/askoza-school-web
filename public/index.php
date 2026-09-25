@@ -7,9 +7,11 @@ require __DIR__ . '/includes/header.php';
 ?>
 
 <main id="main">
-  <section class="hero section-dark">
-    <div class="container hero-grid">
-      <div class="hero-copy">
+  <section class="hero hero-redesign section-dark">
+    <div class="hero-orbit hero-orbit-a" aria-hidden="true"></div>
+    <div class="hero-orbit hero-orbit-b" aria-hidden="true"></div>
+    <div class="container hero-grid hero-grid-redesign">
+      <div class="hero-copy reveal">
         <p class="eyebrow">Авторская образовательная платформа</p>
         <h1>Школа корпоративного заемщика <span>Сергея Акинина</span></h1>
         <p class="hero-lead">Понимать кредит. Управлять риском. Сохранять бизнес.</p>
@@ -23,32 +25,65 @@ require __DIR__ . '/includes/header.php';
           <p>Под эгидой АСКОЗА — Ассоциации корпоративных заемщиков и специалистов по корпоративному кредитованию</p>
         </div>
       </div>
-      <div class="hero-visual" aria-label="Жизненный цикл корпоративного заемщика">
-        <div class="hero-portrait">
-          <div class="portrait-placeholder">
-            <span>Фото</span>
-            <strong>Сергея Акинина</strong>
-          </div>
-        </div>
-        <div class="hero-path" aria-hidden="true">
-          <span>Кредит</span><i></i><span>Управление</span><i></i><span>Риск</span><i></i><span>Урегулирование</span>
+
+      <div class="hero-system reveal" aria-label="Жизненный цикл корпоративного заемщика">
+        <div class="hero-system-glow" aria-hidden="true"></div>
+        <svg class="hero-system-svg" viewBox="0 0 640 520" role="img" aria-labelledby="hero-system-title hero-system-desc">
+          <title id="hero-system-title">Жизненный цикл корпоративного заемщика</title>
+          <desc id="hero-system-desc">Переход от кредита и управления обязательствами к зоне риска и урегулированию.</desc>
+          <defs>
+            <linearGradient id="pathGradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#8fd8ff"/>
+              <stop offset="55%" stop-color="#29a9f0"/>
+              <stop offset="78%" stop-color="#d8b766"/>
+              <stop offset="100%" stop-color="#d47b7b"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <g class="hero-grid-lines" opacity=".14">
+            <path d="M40 90H600M40 180H600M40 270H600M40 360H600M40 450H600"/>
+            <path d="M120 50V470M240 50V470M360 50V470M480 50V470"/>
+          </g>
+          <path class="hero-main-path" d="M58 318 C145 300 174 292 228 298 C296 306 325 238 390 250 C456 262 466 204 584 192" />
+          <path class="hero-main-path hero-main-path-glow" d="M58 318 C145 300 174 292 228 298 C296 306 325 238 390 250 C456 262 466 204 584 192" />
+          <g class="hero-nodes">
+            <g transform="translate(74 315)"><circle r="7"/><circle class="pulse" r="18"/><text x="-18" y="45">Кредит</text><text class="node-index" x="-17" y="-22">01</text></g>
+            <g transform="translate(232 298)"><circle r="7"/><circle class="pulse" r="18"/><text x="-38" y="45">Управление</text><text class="node-index" x="-17" y="-22">02</text></g>
+            <g transform="translate(391 250)"><circle r="7"/><circle class="pulse risk" r="18"/><text x="-18" y="45">Риск</text><text class="node-index" x="-17" y="-22">03</text></g>
+            <g transform="translate(565 195)"><circle r="7"/><circle class="pulse critical" r="18"/><text x="-50" y="45">Урегулирование</text><text class="node-index" x="-17" y="-22">04</text></g>
+          </g>
+          <g class="hero-data-cloud" aria-hidden="true">
+            <circle cx="390" cy="250" r="72"/><circle cx="390" cy="250" r="112"/><circle cx="390" cy="250" r="154"/>
+          </g>
+        </svg>
+        <div class="hero-system-caption">
+          <span>Навигация заемщика</span>
+          <strong>от решения о кредите до сложной ситуации</strong>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="manifesto section">
-    <div class="container container-narrow">
-      <p class="eyebrow eyebrow-dark">Зачем существует Школа</p>
-      <h2>Предпринимателей учат, как получить кредит.<br><span>Мы учим, как быть заемщиком.</span></h2>
-      <p>Корпоративный кредит не заканчивается в момент выдачи денег. С этого момента начинаются обязательства, контроль финансовых показателей, взаимодействие с банком и ответственность за принимаемые решения.</p>
-      <p>Школа помогает предпринимателю понимать эту систему и профессионально действовать как в нормальной ситуации, так и тогда, когда финансовое положение бизнеса начинает меняться.</p>
+  <section class="manifesto manifesto-redesign section">
+    <div class="container manifesto-grid">
+      <div class="manifesto-number reveal" aria-hidden="true">01</div>
+      <div class="manifesto-copy reveal">
+        <p class="eyebrow eyebrow-dark">Зачем существует Школа</p>
+        <h2><span class="manifesto-muted">Предпринимателей учат, как получить кредит.</span><br><span class="manifesto-focus">Мы учим, как быть заемщиком.</span></h2>
+      </div>
+      <div class="manifesto-body reveal">
+        <p>Корпоративный кредит не заканчивается в момент выдачи денег. С этого момента начинаются обязательства, контроль финансовых показателей, взаимодействие с банком и ответственность за принимаемые решения.</p>
+        <p>Школа помогает предпринимателю понимать эту систему и профессионально действовать как в нормальной ситуации, так и тогда, когда финансовое положение бизнеса начинает меняться.</p>
+      </div>
     </div>
   </section>
 
-  <section class="lifecycle section section-soft" id="lifecycle">
+  <section class="lifecycle lifecycle-redesign section section-soft" id="lifecycle">
     <div class="container">
-      <div class="section-heading">
+      <div class="section-heading reveal">
         <div>
           <p class="eyebrow eyebrow-dark">Навигация по жизненному циклу</p>
           <h2>Где вы сейчас как заемщик?</h2>
@@ -56,70 +91,129 @@ require __DIR__ . '/includes/header.php';
         <p>Выберите свою ситуацию — и мы покажем, какие знания и инструменты актуальны именно на этом этапе.</p>
       </div>
 
-      <div class="stage-grid">
-        <article class="stage-card stage-1">
-          <span class="stage-number">01</span>
-          <div><h3>Планирую кредит</h3><p>Оцениваете возможность привлечения финансирования или готовитесь подписывать кредитные документы.</p></div>
-          <ul class="stage-tags"><li>условия</li><li>риски</li><li>обеспечение</li><li>ответственность</li></ul>
-          <a href="#programs">Я готовлюсь к кредиту <span>→</span></a>
-        </article>
+      <div class="lifecycle-map reveal" data-lifecycle>
+        <div class="lifecycle-line" aria-hidden="true"><span></span></div>
+        <button class="life-node is-active" type="button" data-stage="1" aria-pressed="true">
+          <span class="life-index">01</span><i></i><strong>Планирую кредит</strong><small>Решение и условия</small>
+        </button>
+        <button class="life-node" type="button" data-stage="2" aria-pressed="false">
+          <span class="life-index">02</span><i></i><strong>Работаю с кредитом</strong><small>Контроль и стратегия</small>
+        </button>
+        <button class="life-node life-node-risk" type="button" data-stage="3" aria-pressed="false">
+          <span class="life-index">03</span><i></i><strong>Появился риск</strong><small>Диагностика и позиция</small>
+        </button>
+        <button class="life-node life-node-critical" type="button" data-stage="4" aria-pressed="false">
+          <span class="life-index">04</span><i></i><strong>Проблема возникла</strong><small>Сценарии и урегулирование</small>
+        </button>
 
-        <article class="stage-card stage-2">
-          <span class="stage-number">02</span>
-          <div><h3>Уже работаю с кредитом</h3><p>Компания обслуживает долг, и важно сохранить управляемость кредитной нагрузки и отношений с банком.</p></div>
-          <ul class="stage-tags"><li>графики</li><li>ковенанты</li><li>мониторинг</li><li>стратегия</li></ul>
-          <a href="#programs">Я действующий заемщик <span>→</span></a>
-        </article>
-
-        <article class="stage-card stage-3">
-          <span class="stage-number">03</span>
-          <div><h3>Появились признаки риска</h3><p>Просрочки еще может не быть, но появились кассовые разрывы, снижение показателей или риск нарушения условий финансирования.</p></div>
-          <ul class="stage-tags"><li>диагностика</li><li>прогноз</li><li>позиция</li><li>коммуникация</li></ul>
-          <a href="#programs">У меня появились риски <span>→</span></a>
-        </article>
-
-        <article class="stage-card stage-4">
-          <span class="stage-number">04</span>
-          <div><h3>Проблема уже возникла</h3><p>Просрочка, дефолт, работа с проблемным подразделением банка, угроза взыскания или банкротства.</p></div>
-          <ul class="stage-tags"><li>оценка</li><li>сценарии</li><li>урегулирование</li><li>план</li></ul>
-          <a href="#programs">У меня сложная ситуация <span>→</span></a>
-        </article>
+        <div class="life-detail" data-stage-panel="1">
+          <div><span class="life-detail-label">Стадия 01</span><h3>Планирую кредит</h3><p>Оцениваете возможность привлечения финансирования или готовитесь подписывать кредитные документы.</p></div>
+          <ul><li>условия</li><li>риски</li><li>обеспечение</li><li>ответственность</li></ul>
+          <a href="#programs">Перейти к программе <span>→</span></a>
+        </div>
+        <div class="life-detail" data-stage-panel="2" hidden>
+          <div><span class="life-detail-label">Стадия 02</span><h3>Уже работаю с кредитом</h3><p>Компания обслуживает долг, и важно сохранить управляемость кредитной нагрузки и отношений с банком.</p></div>
+          <ul><li>графики</li><li>ковенанты</li><li>мониторинг</li><li>стратегия</li></ul>
+          <a href="#programs">Перейти к программе <span>→</span></a>
+        </div>
+        <div class="life-detail" data-stage-panel="3" hidden>
+          <div><span class="life-detail-label">Стадия 03</span><h3>Появились признаки риска</h3><p>Просрочки еще может не быть, но появились кассовые разрывы, снижение показателей или риск нарушения условий финансирования.</p></div>
+          <ul><li>диагностика</li><li>прогноз</li><li>позиция</li><li>коммуникация</li></ul>
+          <a href="#programs">Перейти к программе <span>→</span></a>
+        </div>
+        <div class="life-detail" data-stage-panel="4" hidden>
+          <div><span class="life-detail-label">Стадия 04</span><h3>Проблема уже возникла</h3><p>Просрочка, дефолт, работа с проблемным подразделением банка, угроза взыскания или банкротства.</p></div>
+          <ul><li>оценка</li><li>сценарии</li><li>урегулирование</li><li>план</li></ul>
+          <a href="#programs">Перейти к программе <span>→</span></a>
+        </div>
       </div>
 
-      <div class="lifecycle-note">
+      <div class="lifecycle-note lifecycle-note-redesign reveal">
+        <div class="note-signal" aria-hidden="true"><span></span><span></span><span></span></div>
         <strong>Чем раньше заемщик понимает, что его положение изменилось, тем больше решений остается в его распоряжении.</strong>
         <p>Финансовая проблема не всегда означает кризис. Но поздняя реакция, отсутствие объективной картины и ошибочные действия способны значительно сократить пространство для решений.</p>
       </div>
     </div>
   </section>
 
-  <section class="method section" id="method">
-    <div class="container">
-      <div class="section-heading">
-        <div><p class="eyebrow eyebrow-dark">Методология Школы</p><h2>Понимать ситуацию до того, как принимать решение</h2></div>
+  <section class="method method-redesign section section-dark" id="method">
+    <div class="method-aurora" aria-hidden="true"></div>
+    <div class="container method-layout">
+      <div class="method-intro reveal">
+        <p class="eyebrow">Методология Школы</p>
+        <h2>Понимать ситуацию до того, как принимать решение</h2>
         <p>Мы учим не универсальным рецептам, а последовательности профессионального анализа.</p>
       </div>
-      <ol class="method-steps">
-        <li><span>01</span><h3>Понять ситуацию</h3><p>Что происходит с бизнесом и обязательствами?</p></li>
-        <li><span>02</span><h3>Подтвердить фактами</h3><p>Какие цифры и документы описывают реальное положение?</p></li>
-        <li><span>03</span><h3>Оценить последствия</h3><p>Как ситуацию видит банк и куда она может развиваться?</p></li>
-        <li><span>04</span><h3>Определить сценарии</h3><p>Какие решения действительно доступны?</p></li>
-        <li><span>05</span><h3>Действовать</h3><p>Какой следующий шаг необходимо сделать сейчас?</p></li>
-      </ol>
+
+      <div class="method-flow" data-method-flow>
+        <div class="method-flow-line" aria-hidden="true"><span></span></div>
+        <article class="method-step is-active reveal"><span>01</span><div><h3>Понять ситуацию</h3><p>Что происходит с бизнесом и обязательствами?</p></div></article>
+        <article class="method-step reveal"><span>02</span><div><h3>Подтвердить фактами</h3><p>Какие цифры и документы описывают реальное положение?</p></div></article>
+        <article class="method-step reveal"><span>03</span><div><h3>Оценить последствия</h3><p>Как ситуацию видит банк и куда она может развиваться?</p></div></article>
+        <article class="method-step reveal"><span>04</span><div><h3>Определить сценарии</h3><p>Какие решения действительно доступны?</p></div></article>
+        <article class="method-step reveal"><span>05</span><div><h3>Действовать</h3><p>Какой следующий шаг необходимо сделать сейчас?</p></div></article>
+      </div>
     </div>
   </section>
 
-  <section class="programs section section-dark" id="programs">
+  <section class="programs programs-redesign section" id="programs">
     <div class="container">
-      <div class="section-heading section-heading-light">
-        <div><p class="eyebrow">Программы Школы</p><h2>Одна система. Разные стадии заемщика.</h2></div>
-        <p>Программы соответствуют различным этапам жизненного цикла корпоративного заемщика.</p>
+      <div class="section-heading reveal">
+        <div><p class="eyebrow eyebrow-dark">Программы Школы</p><h2>Одна система. Четыре стадии заемщика.</h2></div>
+        <p>Переключайте стадии — содержание программы меняется вместе с ситуацией заемщика.</p>
       </div>
-      <div class="program-roadmap">
-        <article class="program-card"><span class="program-index">01</span><p class="program-state">До возникновения обязательств</p><h3>Ваш первый корпоративный кредит</h3><p>Как оценить возможности бизнеса, понимать кредитные документы и заранее видеть финансовые и личные риски.</p><a href="#">О программе <span>→</span></a></article>
-        <article class="program-card"><span class="program-index">02</span><p class="program-state">Для действующих заемщиков</p><h3>Кредитная стратегия и управление обязательствами</h3><p>Как управлять долговой нагрузкой, графиками платежей, финансовыми условиями и взаимодействием с банком после получения кредита.</p><a href="#">О программе <span>→</span></a></article>
-        <article class="program-card program-card-accent"><span class="program-index">03</span><p class="program-state">Когда ситуация еще управляема</p><h3>Я — заемщик в зоне риска</h3><p>Ранняя диагностика кредитного риска, финансовая самодиагностика и подготовка конструктивной позиции для переговоров.</p><strong>Результат: «Паспорт заемщика» + персональный план действий.</strong><a href="#">О программе <span>→</span></a></article>
-        <article class="program-card program-card-accent-strong"><span class="program-index">04</span><p class="program-state">Когда проблема уже реализовалась</p><h3>Я — проблемный заемщик</h3><p>Логика проблемной задолженности, риски взыскания и выбор реалистичного механизма урегулирования.</p><strong>Результат: карта механизмов + антикризисный план 7 / 30 / 90 дней.</strong><a href="#">О программе <span>→</span></a></article>
+
+      <div class="program-tabs reveal" data-program-tabs>
+        <div class="program-tablist" role="tablist" aria-label="Программы Школы">
+          <button class="program-tab is-active" type="button" role="tab" aria-selected="true" data-program="1"><span>01</span> Первый кредит</button>
+          <button class="program-tab" type="button" role="tab" aria-selected="false" data-program="2"><span>02</span> Управление</button>
+          <button class="program-tab" type="button" role="tab" aria-selected="false" data-program="3"><span>03</span> Зона риска</button>
+          <button class="program-tab" type="button" role="tab" aria-selected="false" data-program="4"><span>04</span> Проблемный заемщик</button>
+        </div>
+
+        <div class="program-panel is-active" data-program-panel="1">
+          <div class="program-copy">
+            <p class="program-state">До возникновения обязательств</p>
+            <h3>Ваш первый корпоративный кредит</h3>
+            <p>Как оценить возможности бизнеса, понимать кредитные документы и заранее видеть финансовые и личные риски.</p>
+            <dl class="program-meta"><div><dt>Фокус</dt><dd>готовность к кредиту</dd></div><div><dt>Результат</dt><dd>карта рисков и ответственности</dd></div></dl>
+            <a class="button button-dark" href="#">О программе</a>
+          </div>
+          <div class="program-visual program-visual-1" aria-hidden="true"><span class="pv-ring r1"></span><span class="pv-ring r2"></span><span class="pv-core"></span><span class="pv-label l1">договор</span><span class="pv-label l2">залог</span><span class="pv-label l3">ковенанты</span></div>
+        </div>
+
+        <div class="program-panel" data-program-panel="2" hidden>
+          <div class="program-copy">
+            <p class="program-state">Для действующих заемщиков</p>
+            <h3>Кредитная стратегия и управление обязательствами</h3>
+            <p>Как управлять долговой нагрузкой, графиками платежей, финансовыми условиями и взаимодействием с банком после получения кредита.</p>
+            <dl class="program-meta"><div><dt>Фокус</dt><dd>контроль обязательств</dd></div><div><dt>Результат</dt><dd>управляемая кредитная стратегия</dd></div></dl>
+            <a class="button button-dark" href="#">О программе</a>
+          </div>
+          <div class="program-visual program-visual-2" aria-hidden="true"><svg viewBox="0 0 420 260"><path d="M18 210 C80 190 102 145 158 162 C220 181 242 104 304 118 C346 128 372 92 402 54"/><g><circle cx="18" cy="210" r="6"/><circle cx="158" cy="162" r="6"/><circle cx="304" cy="118" r="6"/><circle cx="402" cy="54" r="6"/></g></svg></div>
+        </div>
+
+        <div class="program-panel" data-program-panel="3" hidden>
+          <div class="program-copy">
+            <p class="program-state">Когда ситуация еще управляема</p>
+            <h3>Я — заемщик в зоне риска</h3>
+            <p>Ранняя диагностика кредитного риска, финансовая самодиагностика и подготовка конструктивной позиции для переговоров.</p>
+            <dl class="program-meta"><div><dt>Формат</dt><dd>3 часа · 2 × 90 минут</dd></div><div><dt>Результат</dt><dd>«Паспорт заемщика» + план действий</dd></div></dl>
+            <a class="button button-dark" href="#">О программе</a>
+          </div>
+          <div class="program-visual program-visual-3" aria-hidden="true"><div class="risk-bars"><i style="--h:24%"></i><i style="--h:42%"></i><i style="--h:57%"></i><i style="--h:74%"></i><i style="--h:92%"></i></div><span class="risk-line"></span></div>
+        </div>
+
+        <div class="program-panel" data-program-panel="4" hidden>
+          <div class="program-copy">
+            <p class="program-state">Когда проблема уже реализовалась</p>
+            <h3>Я — проблемный заемщик</h3>
+            <p>Логика проблемной задолженности, риски взыскания и выбор реалистичного механизма урегулирования.</p>
+            <dl class="program-meta"><div><dt>Формат</dt><dd>3 часа · 2 × 90 минут</dd></div><div><dt>Результат</dt><dd>карта механизмов + план 7 / 30 / 90 дней</dd></div></dl>
+            <a class="button button-dark" href="#">О программе</a>
+          </div>
+          <div class="program-visual program-visual-4" aria-hidden="true"><span class="scenario s1">реструктуризация</span><span class="scenario s2">медиация</span><span class="scenario s3">реализация актива</span><span class="scenario s4">банкротный сценарий</span><i class="scenario-core"></i></div>
+        </div>
       </div>
     </div>
   </section>
