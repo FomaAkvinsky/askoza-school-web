@@ -1032,3 +1032,349 @@ h3 {
   .program-tab { text-align:left; border-right:0; }
   .program-meta { grid-template-columns:1fr; }
 }
+
+
+/* ===== Typography v3: IBS-inspired scale and rhythm =====
+   IBS brandbook uses Stag Sans Light / Medium / Semibold.
+   We do not redistribute the proprietary font here; the stack is prepared
+   to use a licensed Stag Sans webfont later, with Arial as the documented fallback.
+*/
+:root {
+  --font-primary: "Stag Sans", Arial, Helvetica, sans-serif;
+  --type-display: clamp(3.5rem, 5vw, 5.25rem);
+  --type-h2: clamp(2.55rem, 3.6vw, 4.15rem);
+  --type-h3: clamp(1.45rem, 1.8vw, 2rem);
+  --type-lead: clamp(1.2rem, 1.45vw, 1.6rem);
+  --type-body-lg: 1.125rem;
+  --type-body: 1rem;
+  --type-small: .875rem;
+  --type-label: .72rem;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--type-body);
+  line-height: 1.42;
+  letter-spacing: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-primary);
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--type-display);
+  line-height: .94;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+h1 span {
+  font-weight: 300;
+  letter-spacing: -.02em;
+}
+
+h2 {
+  font-size: var(--type-h2);
+  line-height: .98;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: var(--type-h3);
+  line-height: 1.04;
+  font-weight: 500;
+  letter-spacing: -.018em;
+}
+
+p {
+  font-weight: 300;
+}
+
+.eyebrow,
+.program-state,
+.life-detail-label,
+.footer-kicker,
+.program-meta dt {
+  font-size: var(--type-label);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: .11em;
+}
+
+.site-nav a {
+  font-size: .875rem;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.brand-copy strong {
+  font-size: .91rem;
+  font-weight: 500;
+  letter-spacing: -.01em;
+}
+
+.brand-copy span {
+  font-size: .78rem;
+  font-weight: 300;
+}
+
+.hero-lead {
+  font-size: var(--type-lead);
+  line-height: 1.16;
+  font-weight: 500;
+  letter-spacing: -.012em;
+}
+
+.hero-text {
+  font-size: var(--type-body-lg);
+  line-height: 1.43;
+  font-weight: 300;
+  max-width: 680px;
+}
+
+.hero-trust p {
+  font-size: .78rem;
+  line-height: 1.38;
+  font-weight: 300;
+}
+
+.button {
+  min-height: 50px;
+  padding: 0 23px;
+  font-size: .875rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.manifesto-copy h2 {
+  font-size: clamp(3rem, 4.6vw, 4.7rem);
+  line-height: .98;
+}
+
+.manifesto-body p {
+  font-size: var(--type-body-lg);
+  line-height: 1.46;
+  font-weight: 300;
+}
+
+.section-heading > p,
+.method-intro > p:not(.eyebrow),
+.program-copy > p:not(.program-state),
+.founder-copy > p:not(.eyebrow):not(.founder-role),
+.institution-grid p:not(.eyebrow),
+.partners-grid > div > p:not(.eyebrow) {
+  font-size: var(--type-body-lg);
+  line-height: 1.46;
+  font-weight: 300;
+}
+
+.life-node strong {
+  font-size: 1.12rem;
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -.012em;
+}
+
+.life-node small {
+  font-size: .8rem;
+  line-height: 1.28;
+  font-weight: 300;
+}
+
+.life-detail h3 {
+  font-size: clamp(2rem, 2.7vw, 2.75rem);
+  line-height: .98;
+  font-weight: 500;
+}
+
+.life-detail p {
+  font-size: 1rem;
+  line-height: 1.43;
+}
+
+.method-step h3 {
+  font-size: clamp(1.45rem, 1.8vw, 1.9rem);
+  line-height: 1.02;
+  font-weight: 500;
+}
+
+.method-step p {
+  font-size: .95rem;
+  line-height: 1.42;
+  font-weight: 300;
+}
+
+.program-tab {
+  font-size: .98rem;
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -.01em;
+}
+
+.program-tab span {
+  font-size: .68rem;
+  font-weight: 500;
+}
+
+.program-copy h3 {
+  font-size: clamp(2.55rem, 3.8vw, 4rem);
+  line-height: .98;
+  font-weight: 500;
+}
+
+.program-meta dd {
+  font-size: .97rem;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.founder-role {
+  font-size: clamp(1.2rem, 1.55vw, 1.55rem);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.founder-facts strong {
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.founder-facts span {
+  font-size: .82rem;
+  line-height: 1.3;
+  font-weight: 300;
+}
+
+.feature-card h3,
+.audience-grid article h3,
+.library-card h3 {
+  font-size: clamp(1.35rem, 1.65vw, 1.75rem);
+  line-height: 1.04;
+  font-weight: 500;
+}
+
+.feature-card p,
+.audience-grid article p,
+.library-card p {
+  font-size: .95rem;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.audience-grid article strong {
+  font-size: .94rem;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.final-cta-inner p:not(.eyebrow) {
+  font-size: var(--type-body-lg);
+  line-height: 1.45;
+}
+
+.final-signature {
+  font-size: 1.22rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.footer-note,
+.footer-links a,
+.footer-contact a {
+  line-height: 1.35;
+  font-weight: 300;
+}
+
+/* IBS-like horizontal rhythm: more content width, less "landing-page bubble" */
+@media (min-width: 1280px) {
+  :root { --container: min(1340px, calc(100% - 72px)); }
+  .section { padding-top: 124px; padding-bottom: 124px; }
+  .hero-redesign { padding-top: 102px; padding-bottom: 96px; }
+  .hero-grid-redesign { gap: 72px; }
+}
+
+/* Tablet proportions */
+@media (max-width: 1024px) {
+  :root {
+    --type-display: clamp(3rem, 6.4vw, 4.4rem);
+    --type-h2: clamp(2.35rem, 5vw, 3.4rem);
+    --type-h3: clamp(1.35rem, 2.4vw, 1.75rem);
+    --type-body-lg: 1.05rem;
+  }
+
+  h1 { line-height: .96; }
+  h2 { line-height: 1; }
+  .section { padding-top: 94px; padding-bottom: 94px; }
+  .hero-redesign { padding-top: 78px; padding-bottom: 76px; }
+  .site-nav a { font-size: .82rem; }
+}
+
+/* Mobile proportions derived from IBS page rhythm */
+@media (max-width: 780px) {
+  :root {
+    --type-display: clamp(2.65rem, 12vw, 3.55rem);
+    --type-h2: clamp(2.15rem, 9.2vw, 2.85rem);
+    --type-h3: clamp(1.3rem, 6vw, 1.65rem);
+    --type-lead: 1.18rem;
+    --type-body-lg: 1rem;
+    --type-body: .98rem;
+    --type-small: .82rem;
+  }
+
+  body { line-height: 1.4; }
+  h1 { line-height: .95; letter-spacing: -.028em; }
+  h2 { line-height: .98; letter-spacing: -.025em; }
+  h3 { line-height: 1.03; }
+
+  .section { padding-top: 74px; padding-bottom: 74px; }
+  .hero-redesign { padding-top: 58px; padding-bottom: 58px; }
+
+  .eyebrow { margin-bottom: 14px; }
+  .hero-text { font-size: 1rem; line-height: 1.42; }
+  .hero-lead { line-height: 1.17; }
+  .button { min-height: 48px; font-size: .86rem; }
+
+  .manifesto-copy h2 { font-size: clamp(2.55rem, 10.5vw, 3.25rem); }
+  .manifesto-body p { font-size: 1rem; }
+
+  .section-heading { margin-bottom: 32px; }
+  .section-heading > p { font-size: .96rem; }
+
+  .life-node strong { font-size: 1rem; }
+  .life-detail h3 { font-size: 2rem; }
+  .life-detail p { font-size: .94rem; }
+
+  .method-step h3 { font-size: 1.42rem; }
+  .method-step p { font-size: .9rem; }
+
+  .program-tab { font-size: .92rem; }
+  .program-copy h3 { font-size: clamp(2.15rem, 9vw, 2.85rem); }
+  .program-copy > p:not(.program-state) { font-size: 1rem; }
+
+  .founder-role { font-size: 1.15rem; }
+  .founder-copy > p:not(.eyebrow):not(.founder-role) { font-size: 1rem; }
+
+  .feature-card h3,
+  .audience-grid article h3,
+  .library-card h3 { font-size: 1.38rem; }
+
+  .footer-links a,
+  .footer-contact a { font-size: .86rem; }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --type-display: clamp(2.45rem, 12.4vw, 3rem);
+    --type-h2: clamp(2rem, 9.8vw, 2.55rem);
+  }
+
+  .section { padding-top: 64px; padding-bottom: 64px; }
+  .hero-redesign { padding-top: 48px; padding-bottom: 52px; }
+  .brand-copy strong { font-size: .78rem; }
+  .brand-copy span { font-size: .7rem; }
+}
