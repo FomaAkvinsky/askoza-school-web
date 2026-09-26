@@ -2,6 +2,8 @@
   const toggle = document.querySelector('[data-nav-toggle]');
   const nav = document.querySelector('[data-nav]');
   const header = document.querySelector('[data-header]');
+  const menuTrigger = document.querySelector('[data-menu-trigger]');
+  const megaMenu = document.querySelector('[data-mega-menu]');
 
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
@@ -17,6 +19,39 @@
         nav.classList.remove('is-open');
         document.body.classList.remove('nav-open');
       });
+    });
+  }
+
+  if (menuTrigger && megaMenu) {
+    const closeMegaMenu = () => {
+      menuTrigger.setAttribute('aria-expanded', 'false');
+      megaMenu.hidden = true;
+      document.body.classList.remove('mega-menu-open');
+    };
+
+    const openMegaMenu = () => {
+      menuTrigger.setAttribute('aria-expanded', 'true');
+      megaMenu.hidden = false;
+      document.body.classList.add('mega-menu-open');
+    };
+
+    menuTrigger.addEventListener('click', () => {
+      const isOpen = menuTrigger.getAttribute('aria-expanded') === 'true';
+      isOpen ? closeMegaMenu() : openMegaMenu();
+    });
+
+    megaMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMegaMenu);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMegaMenu();
+    });
+
+    document.addEventListener('click', (event) => {
+      if (megaMenu.hidden) return;
+      if (megaMenu.contains(event.target) || menuTrigger.contains(event.target)) return;
+      closeMegaMenu();
     });
   }
 
