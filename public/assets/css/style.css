@@ -1734,3 +1734,319 @@ p { font-weight: 300; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+
+/* =========================================================
+   Header v2 — logo lockup + dropdown mega menu
+   ========================================================= */
+.site-header {
+  overflow: visible;
+}
+
+.header-inner {
+  min-height: 82px;
+}
+
+.brand-lockup {
+  min-width: 0;
+  gap: 13px;
+}
+
+.brand-logo-mark {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+}
+
+.brand-lockup .brand-copy strong {
+  max-width: 260px;
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+.brand-lockup .brand-copy span {
+  margin-top: 5px;
+  font-family: var(--font-sans);
+  font-size: .61rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: .20em;
+  text-transform: uppercase;
+  color: #798395;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-situation,
+.menu-trigger {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 17px;
+  border-radius: 2px;
+  font-family: var(--font-sans);
+  font-size: .66rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.header-situation {
+  border: 1px solid var(--navy);
+  background: var(--white);
+  color: var(--navy);
+}
+
+.header-situation:hover {
+  background: #f4f7fa;
+  border-color: var(--electric);
+  color: #176e9d;
+}
+
+.menu-trigger {
+  gap: 10px;
+  border: 1px solid var(--navy);
+  background: var(--navy);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.menu-trigger:hover,
+.menu-trigger[aria-expanded="true"] {
+  background: var(--electric);
+  border-color: var(--electric);
+}
+
+.menu-trigger-icon {
+  position: relative;
+  width: 18px;
+  height: 10px;
+}
+
+.menu-trigger-icon::before,
+.menu-trigger-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  transition: transform .25s ease, top .25s ease;
+}
+
+.menu-trigger-icon::before { top: 2px; }
+.menu-trigger-icon::after { top: 8px; }
+
+.menu-trigger[aria-expanded="true"] .menu-trigger-icon::before {
+  top: 5px;
+  transform: rotate(45deg);
+}
+
+.menu-trigger[aria-expanded="true"] .menu-trigger-icon::after {
+  top: 5px;
+  transform: rotate(-45deg);
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  border-top: 1px solid rgba(10,23,48,.06);
+  border-bottom: 1px solid rgba(10,23,48,.10);
+  background: rgba(255,255,255,.985);
+  box-shadow: 0 28px 60px rgba(10,23,48,.12);
+  backdrop-filter: blur(18px);
+  animation: megaMenuIn .28s var(--ease) both;
+}
+
+.mega-menu[hidden] { display: none; }
+
+.mega-menu-inner {
+  padding-top: 38px;
+  padding-bottom: 28px;
+}
+
+.mega-menu-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.25fr .85fr 1.1fr;
+  gap: 44px;
+}
+
+.mega-column {
+  min-width: 0;
+}
+
+.mega-kicker {
+  margin: 0 0 20px;
+  color: #8a6e3b;
+  font-size: .63rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.mega-column a {
+  display: block;
+  padding: 7px 0;
+  color: var(--navy);
+  text-decoration: none;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.24;
+  font-weight: 600;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.mega-column a:hover {
+  color: var(--electric);
+  transform: translateX(3px);
+}
+
+.mega-column a span {
+  display: inline-block;
+  min-width: 28px;
+  margin-right: 6px;
+  color: rgba(10,23,48,.32);
+  font-family: var(--font-sans);
+  font-size: .63rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  vertical-align: .12em;
+}
+
+.mega-column .mega-index-link {
+  margin-bottom: 6px;
+  color: #6f7988;
+  font-family: var(--font-sans);
+  font-size: .67rem;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.mega-menu-media {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  align-items: end;
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.mega-media-title {
+  color: var(--navy);
+  text-decoration: none;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.mega-media-title:hover { color: var(--electric); }
+
+.mega-media-link {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.mega-media-link:hover { color: var(--electric); }
+
+@keyframes megaMenuIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1100px) {
+  .brand-lockup .brand-copy strong { max-width: 205px; font-size: .7rem; }
+  .brand-lockup .brand-copy span { font-size: .56rem; }
+  .mega-menu-grid { grid-template-columns: 1fr 1fr; row-gap: 34px; }
+}
+
+@media (max-width: 760px) {
+  .header-inner { min-height: 68px; gap: 12px; }
+
+  .brand-logo-mark {
+    width: 39px;
+    height: 39px;
+  }
+
+  .brand-lockup .brand-copy strong {
+    max-width: 155px;
+    font-size: .61rem;
+    line-height: 1.07;
+  }
+
+  .brand-lockup .brand-copy span {
+    font-size: .49rem;
+    letter-spacing: .15em;
+  }
+
+  .header-actions { gap: 7px; }
+
+  .header-situation {
+    display: none;
+  }
+
+  .menu-trigger {
+    min-height: 38px;
+    padding: 0 13px;
+    font-size: .61rem;
+  }
+
+  .mega-menu {
+    position: fixed;
+    top: 68px;
+    bottom: 0;
+    overflow-y: auto;
+  }
+
+  .mega-menu-inner {
+    padding-top: 28px;
+    padding-bottom: 34px;
+  }
+
+  .mega-menu-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mega-column {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .mega-column:last-child { border-bottom: 0; }
+
+  .mega-column a {
+    padding: 7px 0;
+    font-size: 1.05rem;
+  }
+
+  .mega-menu-media {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .mega-media-link { white-space: normal; }
+}
