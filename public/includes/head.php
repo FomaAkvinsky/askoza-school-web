@@ -13,6 +13,8 @@ $pageCanonical = $pageCanonical ?? 'https://school.askoza.ru/';
   <meta name="theme-color" content="#0C1E35">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="<?= htmlspecialchars($pageCanonical, ENT_QUOTES, 'UTF-8') ?>">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/img/favicon.svg">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
@@ -24,8 +26,8 @@ $pageCanonical = $pageCanonical ?? 'https://school.askoza.ru/';
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=4">
-  <script defer src="/assets/js/main.js?v=3"></script>
+  <link rel="stylesheet" href="/assets/css/style.css?v=5">
+  <script defer src="/assets/js/main.js?v=4"></script>
 
   <script type="application/ld+json">
   {
