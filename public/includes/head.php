@@ -21,8 +21,11 @@ $pageCanonical = $pageCanonical ?? 'https://school.askoza.ru/';
   <meta property="og:description" content="<?= htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8') ?>">
   <meta property="og:url" content="<?= htmlspecialchars($pageCanonical, ENT_QUOTES, 'UTF-8') ?>">
 
-  <link rel="stylesheet" href="/assets/css/style.css?v=3">
-  <script defer src="/assets/js/main.js?v=2"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css?v=4">
+  <script defer src="/assets/js/main.js?v=3"></script>
 
   <script type="application/ld+json">
   {
