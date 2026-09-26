@@ -2050,3 +2050,18 @@ p { font-weight: 300; }
 
   .mega-media-link { white-space: normal; }
 }
+
+
+/* Program links in mega menu: keep wrapped titles aligned after the number */
+.mega-menu-grid .mega-column:nth-child(2) a:not(.mega-index-link) {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  column-gap: 14px;
+  align-items: start;
+}
+
+.mega-menu-grid .mega-column:nth-child(2) a:not(.mega-index-link) span {
+  min-width: 0;
+  margin-right: 0;
+  padding-top: .16em;
+}
